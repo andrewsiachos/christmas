@@ -1,0 +1,341 @@
+/*GLOBAL*/
+@font-face{
+    font-family:candyCane;
+    src:url("font/Candcu__.ttf");
+}
+@font-face{
+    font-family:santa;
+    src:url("font/SantasSleighFull.ttf");
+}
+@font-face {
+    font-family: christmasCard;
+    src: url("font/christmasCard.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#ad1718;
+    color:white;
+}
+li{
+    text-decoration: none;
+    width:40%;
+    text-align:center;
+    font-size:22px;
+}
+a{
+    color:white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+a:hover{
+    color:#F8B229;
+    text-shadow: 0 0 10px #fff;
+}
+/*-------------------------------*/
+/*Snowflake*/
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+.snowflake {
+    position: fixed;
+    background-color: white;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+/*-----------*/
+/*NAV STYLE*/
+nav{
+    background:#165B33;
+    color:white;
+    position:fixed;
+    height:auto;
+    max-height:50px;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+nav ul{
+    width:80%;
+    list-style-type: none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#menuActivate{
+    transition: all 0.2s;
+    display:none;
+}
+#menuActivate:hover{
+    cursor: pointer;
+    color:#F8B229;
+    text-shadow: 0 0 10px #fff;
+}
+
+
+.chrTree{
+    width:10%;
+}
+.chrTree:nth-of-type(1){
+    padding-left:10px;
+}
+.chrTree:nth-of-type(2){
+    display:flex;
+    justify-content: flex-end;
+    padding-right:10px;
+}
+.sleigh{
+    display: none;
+}
+
+/*--------------------------------------*/
+
+/*WALLPAPER STYLE*/
+
+#wallpaper{
+    height:320px;
+    background-image:url("decoration.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: 60% 80%;
+    display:flex;
+    margin-top:50px;
+    font-family:candyCane;
+    align-items: center;
+    justify-content:center;
+    color:red;
+    flex-direction: column;
+}
+#merryChristmas{
+    font-size:50px;
+    text-align:center;
+}
+#wallpaper h2{
+    font-size:40px;
+    text-align:center;
+}
+#merryChristmas{
+    display:none;
+}
+#countdown{
+    font-size:40px;
+    margin-top:10px;
+}
+/*-------------------------------------------*/
+/*Wrapper*/
+#wrapper{
+    color:white;
+    width:95%;
+    margin:0 auto;
+}
+.row{
+    display:flex;
+    margin-top:15px;
+}
+.row div{
+    width:50%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-family: santa;
+}
+.colDir{
+    flex-direction:column;
+}
+.row img{
+    display:block;
+    width:425px;
+    height:425px;
+}
+.row h2{
+    font-size:75px;
+    text-align:center;
+}
+.row p{
+    font-size:50px;
+    text-align:center;
+}
+.cane{
+    font-size:30px;
+}
+/*------------------------------*/
+
+/*The Night Before Christmas*/
+#nightBefore{
+    margin-top:10px;
+}
+#nightBefore h2{
+    text-align:center;
+    font-family:santa;
+    font-size:45px;
+    color:gold;
+}
+#theStory{
+    width:500px;
+    height:600px;
+    overflow:auto;
+    background-image: url("papyrus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:10px auto;
+    border-radius:10px 5px 10px 5px;
+    text-align:center;
+    color:#165b33;
+    font-family:christmasCard;
+    font-size: 25px;
+}
+/*-----------------------------------------------*/
+/*Christmas Radio*/
+#christmasRadio{
+    border-top:2px solid gold;
+    width:95%;
+    margin:10px auto;
+    font-family:christmasCard;
+}
+#christmasRadio h2{
+    text-align:center;
+    font-size:30px;
+}
+#thePlayer{
+    width: 50px;
+    height:50px;
+    border:2px solid gold;
+    border-radius:50%;
+    margin:10px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#165b33;
+    color:gold;
+}
+#thePlayer:hover{
+    cursor: pointer;
+}
+/*-----------------------------------------------*/
+
+/*Footer*/
+footer{
+    background:#165b33;
+    margin-top:20px;
+    padding:15px;
+    display: flex;
+    justify-content:center;
+}
+footer h3{
+    text-align:center;
+}
+footer div{
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+footer div:nth-of-type(2){
+    justify-content: center;
+}
+footer div:nth-of-type(3){
+    justify-content:flex-end;
+}
+footer img{
+    display:block;
+}
+/*------------------------------*/
+
+/*Device Settings*/
+@media(max-width: 868px){
+    #wrapper .row:nth-of-type(odd){
+        flex-direction:column;
+    }
+    #wrapper .row:nth-of-type(even){
+        flex-direction:column-reverse;
+    }
+    .row div{
+        width:100%;
+    }
+    .colDir{
+        padding-top:10px;
+    }
+}
+@media(max-width:768px){
+    /*NAV Style*/
+    #menuActivate{
+        display:block;
+    }
+    nav{
+        max-height:none;
+    }
+    nav ul{
+        flex-direction:column;
+    }
+
+    .chrTree{
+        width:30%;
+    }
+    .chrTree:nth-of-type(1){
+        padding-left:0;
+        text-align:center;
+    }
+    .chrTree:nth-of-type(2){
+        display:block;
+        text-align:center;
+        padding-right:0;
+    }
+    .nav-menu{
+        display:none;
+        margin-top:8px;
+    }
+    /*------------------------------*/
+
+}
+
+@media (max-width:550px) {
+    li{
+        width:100%;
+    }
+    /*Wallpaper*/
+    #wallpaper h2{
+        font-size:35px;
+    }
+    /*------------*/
+    /*Night Before Christmas*/
+    #theStory{
+        width:100%;
+    }
+    #nightBefore h2{
+        font-size:40px;
+    }
+    /*------------------------*/
+    /*Wrapper*/
+    .row h2{
+        font-size:60px;
+    }
+    .row p{
+        font-size:40px;
+    }
+}
+@media(max-width:480px){
+    /*Wrapper*/
+    .row img{
+        width:100%;
+    }
+    /*-----------*/
+    #theStory{
+        font-size:22px;
+    }
+
+    footer div:nth-of-type(odd){
+        width:30%;
+    }
+}
+
