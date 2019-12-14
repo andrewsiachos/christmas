@@ -10,6 +10,8 @@ var browserHeight;
 var numberOfSnowflakes = 50;
 if($("body").width() >700){
     numberOfSnowflakes = 500;
+}else{
+    numberOfSnowflakes = 100;
 }
 
 // Flag to reset the position of the snowflakes
