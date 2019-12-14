@@ -6,7 +6,11 @@ var browserWidth;
 var browserHeight;
 
 // Specify the number of snowflakes you want visible
-var numberOfSnowflakes = 500;
+
+var numberOfSnowflakes = 50;
+if($("body").width() >700){
+    numberOfSnowflakes = 500;
+}
 
 // Flag to reset the position of the snowflakes
 var resetPosition = false;
