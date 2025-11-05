@@ -14,7 +14,7 @@ $('li').on('mouseleave', function(){
 
 
 /*Christmas Countdown*/
-var countDownTime = new Date("Dec 25, 2024 00:00:00").getTime();
+var countDownTime = new Date("Dec 25, 2025 00:00:00").getTime();
 
 var x = setInterval(function(){
     var now = new Date().getTime();
@@ -73,3 +73,4 @@ $("#thePlayer").on("click", function(){
 $("#menuActivate").on('click', function () {
    $(".nav-menu").toggle();
 });
+
